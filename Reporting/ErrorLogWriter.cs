@@ -66,7 +66,7 @@ public sealed class ErrorLogWriter
             {
                 var normalizedMessage = NormalizeMessage(entry.Message);
                 var errorKey = CreateErrorKey(normalizedMessage);
-                var key = $"{today:yyyy-MM-dd}|{errorKey}";
+                var key = $"{today:yyyy-MM-dd}|{entry.SourceName}|{errorKey}";
                 if (!_errors.TryGetValue(key, out var error))
                 {
                     error = new ErrorReportState { SourceName = entry.SourceName, Timestamp = entry.Timestamp, Level = entry.Level, Message = normalizedMessage, ErrorKey = errorKey, CountToday = 0 };
@@ -113,7 +113,7 @@ public sealed class ErrorLogWriter
         {
             error.Message = NormalizeMessage(error.Message);
             error.ErrorKey = CreateErrorKey(error.Message);
-            var key = $"{error.Timestamp:yyyy-MM-dd}|{error.ErrorKey}";
+            var key = $"{error.Timestamp:yyyy-MM-dd}|{error.SourceName}|{error.ErrorKey}";
             if (migrated.TryGetValue(key, out var existing))
             {
                 if (error.Timestamp > existing.Timestamp)

@@ -60,7 +60,7 @@ Log\LmsErrorLog.log.state.json
 State\scanner-state.json
 ```
 
-`LmsErrorLog.log` ist die gemeinsame Fehlerliste. Doppelte Fehler werden pro Tag anhand ihrer normalisierten Meldung zusammengefasst. Der Service ist nicht Bestandteil des Vergleichsschluessels; derselbe Meldungstext aus verschiedenen Services wird daher als ein Fehler zusammengefasst. Der Timestamp, der Status und der Service entsprechen dem zuletzt erkannten Auftreten. Am Zeilenende steht die Anzahl der heutigen Vorkommen.
+`LmsErrorLog.log` ist die gemeinsame Fehlerliste. Doppelte Fehler werden pro Tag und Service anhand ihrer normalisierten Meldung zusammengefasst. Derselbe Meldungstext aus verschiedenen Services wird daher als separater Fehler pro Service angezeigt. Der Timestamp und der Status entsprechen dem zuletzt erkannten Auftreten. Am Zeilenende steht die Anzahl der heutigen Vorkommen.
 
 Beispiel:
 
