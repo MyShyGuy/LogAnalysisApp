@@ -1,0 +1,25 @@
+# Build output (regenerated automatically by dotnet build/publish, including NuGet restore)
+bin/
+obj/
+
+# Local runtime output next to the app (state, logs, published configs)
+Log/
+State/
+LmsErrorLog.log
+LmsErrorLog.log.state.json
+scanner-state.json
+
+# User-specific files
+*.user
+*.suo
+.vs/
+.vscode/*
+!.vscode/extensions.json
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Editor swap/backup files
+*.swp
+*~
