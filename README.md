@@ -1,11 +1,11 @@
-# Krones LMS Log Analysis App
+# LMS Log Analysis App
 
 Die Anwendung ueberwacht konfigurierte LMS-Logdateien und sammelt neue Fehler in einer gemeinsamen Fehlerdatei. Sie kann als normale Windows-Anwendung oder als Windows-Service ausgefuehrt werden.
 
 ## Dateien im Publish-Ordner
 
 ```text
-Krones.Lms.LogAnalysisApp.exe   Anwendung, selbststaendig lauffaehig
+Lms.LogAnalysisApp.exe          Anwendung, selbststaendig lauffaehig
 appsettings.json                 Konfiguration der Anwendung
 README.md                        Diese Dokumentation
 ```
@@ -33,7 +33,7 @@ Beispiel:
 C:\LMS_v12.6.7.0\
 |
 +-- LogAnalysisApp\
-|   +-- Krones.Lms.LogAnalysisApp.exe
+|   +-- Lms.LogAnalysisApp.exe
 |   +-- appsettings.json
 |   +-- README.md
 |   +-- Log\
@@ -117,7 +117,7 @@ Direkt aus PowerShell oder CMD:
 
 ```powershell
 cd "C:\LMS_v12.6.7.0\LogAnalysisApp"
-.\Krones.Lms.LogAnalysisApp.exe
+.\Lms.LogAnalysisApp.exe
 ```
 
 Zum Beenden bei direktem Start `Ctrl+C` druecken.
@@ -125,7 +125,7 @@ Zum Beenden bei direktem Start `Ctrl+C` druecken.
 Als Windows-Service muss der Service mit dem Pfad zur EXE eingerichtet werden. Die Anwendung verwendet dabei den Service-Namen:
 
 ```text
-Krones.Lms.LogAnalysisApp
+Lms.LogAnalysisApp
 ```
 
 Nach jeder Aenderung an `appsettings.json` muss der Service neu gestartet werden, da die Konfiguration nur beim Start geladen wird.
