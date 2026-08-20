@@ -137,3 +137,7 @@ Der Scanner merkt sich pro Quelle die bereits gelesene Byteposition in `State\\s
 Die Fehlerzusammenfassung wird in `Log\\LmsErrorLog.log.state.json` gespeichert. Beim Start wird dieser Zustand geladen. Eintraege aus vergangenen Tagen werden entfernt, sobald ein neuer relevanter Fehler verarbeitet wird; die Zusammenfassung ist daher eine Tagesliste.
 
 Ein Logeintrag muss mit einer vollstaendigen Zeile enden. Unvollstaendige letzte Zeilen werden bis zur naechsten Pruefung zurueckgestellt. Mehrzeilige Eintraege werden ueber ihren ersten Header erkannt und zusammen mit ihren Folgezeilen verarbeitet.
+
+
+## Ready to use
+In der Zip datei befindet sich eine fertig compilierte Version. Zusätzliche Logs können über die appsettings.json eingebunden werden. Eine Kontrolle der Pfade ist notwendig weil der Path bei jedem Kunden anders heißen können.
